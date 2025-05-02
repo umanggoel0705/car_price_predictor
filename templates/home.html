@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html> 
+    <head>
+        <title>Car Price Predictor</title>
+        <style>
+            body{
+                text-align : center;
+            }
+            #sub{
+                background-color : grey;
+            }
+            button{
+                color : white;
+                padding : 5px;
+                border : 0px;
+                border-radius : 3px;
+                font-size : 13px;
+            }
+            button:hover{
+                cursor : pointer;
+                font-size : 14px;
+            }
+            .inp{
+                font-size : 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Car Price Predictor</h1>
+        <hr>
+        <h2>Enter the input values.</h2>
+        <div class="inp">
+            <form action="/predict_api" method="post">
+                <input type="text" name="name" placeholder="Name" required="required"><br>
+                <br>
+                <input type="number" name="year" placeholder="Year of manufacture" required="required"><br>
+                <br>
+                <input type="number" name="km_driven" placeholder="Kilometers Driven" required="required"><br>
+                <br>
+                <label for="fuel">Choose fuel:</label>
+                <select name="fuel" required="required">
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="cng">CNG</option>
+                    <option value="lpg">LPG</option>
+                </select><br>
+                <br>
+                <label for="seller_type">Choose seller type:</label>
+                <select name="seller_type" required="required">
+                    <option value="individual">Individual</option>
+                    <option value="dealer">Dealer</option>
+                    <option value="trustmark_dealer">Trustmark Dealer</option>
+                </select><br>
+                <br>
+                <label for="transmission">Choose transmission:</label>
+                <select name="transmission" required="required">
+                    <option value="manual">Manual</option>
+                    <option value="automatic">Automatic</option>
+                </select><br>
+                <br>
+                <label for="owner">Choose Ownership:</label>
+                <select name="owner" required="required">
+                    <option value="first">First Owner</option>
+                    <option value="second">Second Owner</option>
+                    <option value="third">Third Owner</option>
+                    <option value="fourth">Fourth & Above Owner</option>
+                    <option value="test_drive">Test Drive Car</option>
+                </select><br>
+                <br>
+                <input type="number" name="mileage" placeholder="Mileage" required="required"><br><br>
+                <input type="number" name="engine" placeholder="Engine" required="required"><br><br>
+                <input type="number" name="max_power" placeholder="Maximum Power" required="required"><br><br>
+                <input type="number" name="seats" placeholder="Number of Seats" required="required"><br><br>
+
+                <button id="sub">Submit</button>
+
+            </form>
+        </div>
+        <h3>{{prediction}}</h3>
+    </body>
+</html>
