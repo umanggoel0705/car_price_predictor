@@ -1,5 +1,5 @@
 # Your workflow name.
-name: Deploy to render.
+name: Deploy to render
 
 # Run workflow on every push to main branch.
 on:
@@ -13,7 +13,7 @@ jobs:
     steps:
       # Check-out your repository.
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
 
 ### ⬇ IMPORTANT PART ⬇ ###
